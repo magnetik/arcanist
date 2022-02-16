@@ -111,7 +111,7 @@ final class ArcanistConsoleLintRenderer extends ArcanistLintRenderer {
 
     $message = $message->newTrimmedMessage();
 
-    $original = $message->getOriginalText();
+    $original = (string) $message->getOriginalText();
     $replacement = $message->getReplacementText();
 
     $line = $message->getLine();

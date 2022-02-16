@@ -190,6 +190,7 @@ abstract class ArcanistLintEngine extends Phobject {
         ->selectSymbolsWithoutLoading();
       $symbol = idx($symbols, 'class$'.get_class($linter));
       if ($symbol) {
+        continue;
         $version .= ':'.md5_file(
           phutil_get_library_root($symbol['library']).'/'.$symbol['where']);
       }
